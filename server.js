@@ -24,5 +24,5 @@ db.once('open', () => console.log('Connected to Mongoose'))
 
 app.use('/', indexRouter)
 
-app.listen(process.env.PORT || 3000)
-console.log("server running at port: 3000")
+app.listen(process.env.PORT || process.env.APP_PORT)
+console.log("server running at port: ", process.env.APP_PORT)
